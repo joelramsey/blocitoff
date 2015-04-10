@@ -225,8 +225,6 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
-    puma (2.11.1)
-      rack (>= 1.1, < 2.0)
     pundit (0.3.0)
       activesupport (>= 3.0.0)
     quiet_assets (1.1.0)
@@ -351,7 +349,6 @@ DEPENDENCIES
   newrelic_rpm
   pg
   pry-rails
-  puma
   pundit
   quiet_assets
   rails (= 4.2.0)
