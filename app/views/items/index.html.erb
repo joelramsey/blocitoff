@@ -1,0 +1,14 @@
+<h1>To-Do List</h1>
+<% if policy(Item.new).create? %>
+<%= link_to "New Item", new_item_path, class: 'btn btn-success' %>
+<% end %>
+<% @items.each do |item| %>
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">
+        <%= link_to item.name, item %>
+      </h4>
+    </div>
+   </div>
+<% end %>
+

@@ -1,0 +1,24 @@
+class ItemPolicy < ApplicationPolicy 
+
+  class Scope  
+    def resolve 
+      if user.admin? || user.moderator? 
+      scope.all
+
+      else
+      scope.where(:id => user.id).exists?
+       
+      end
+    end
+  end 
+
+  
+  def index?
+    record.user == user
+  end
+  
+  def destroy?
+    user.present? && (record.user == user || user.admin? || user.moderator?)
+  end
+
+end

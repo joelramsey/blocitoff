@@ -12,6 +12,16 @@ require 'faker'
 end
 users = User.all
 
+#Create Items
+50.times do
+  item = Item.create!(
+    user: users.sample,
+    name:     Faker::Lorem.sentence,
+    details:  Faker::Lorem.paragraph
+    )
+end
+items = Item.all
+
 # Create an admin user
  admin = User.new(
    name:     'Admin User',
@@ -43,3 +53,4 @@ users = User.all
 
 puts "Seed finished"
 puts "#{User.count} users created"
+puts "#{Item.count} items created"
