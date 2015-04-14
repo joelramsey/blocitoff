@@ -1,4 +1,4 @@
-<h1>To-Do List</h1>
+<h2><%= current_user.name %>'s Task List</h2>
 <% if policy(Item.new).create? %>
 <%= link_to "New Item", new_item_path, class: 'btn btn-success' %>
 <% end %>
@@ -6,8 +6,11 @@
   <div class="media">
     <div class="media-body">
       <h4 class="media-heading">
+        <% if policy(item).destroy? %>
+        <%= link_to "Delete", item, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this item?' } %>
+        <% end %>
         <%= link_to item.name, item %>
-      </h4>
+        </h4>
     </div>
    </div>
 <% end %>
