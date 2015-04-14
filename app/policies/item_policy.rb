@@ -14,7 +14,7 @@ class ItemPolicy < ApplicationPolicy
 
   
   def index?
-    record.user == user
+    user.admin? || user.id?
   end
   
   def destroy?
