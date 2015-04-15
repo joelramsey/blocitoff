@@ -10,7 +10,10 @@
       | <%= link_to "", [item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %> |
       <% end %>
       </small>
-      <%= item.name %>   
+      <span class="pull-center"><%= item.name %></span>  
+      <small>
+      <span class="pull-right">Days Remaining: <%= item.days_left %></span>
+      </small>
       </br>
       </br>
       <% end %>
