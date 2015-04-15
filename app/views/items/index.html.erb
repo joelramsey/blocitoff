@@ -1,17 +1,7 @@
 <h2><%= current_user.name %>'s Task List</h2>
 <% if policy(Item.new).create? %>
-<%= link_to "New Item", new_item_path, class: 'btn btn-success' %>
+<%= link_to "New", new_item_path, class: 'glyphicon glyphicon-plus' %>
 <% end %>
-<% @items.each do |item| %>
-  <div class="media">
-    <div class="media-body">
-      <h4 class="media-heading">
-        <% if policy(item).destroy? %>
-        <%= link_to "", item, method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
-        <% end %>
-        <%= link_to item.name, item %>
-        </h4>
-    </div>
-   </div>
-<% end %>
+<%= render partial: 'items/item' %>
+
 

@@ -13,10 +13,6 @@
 <%= f.label :name %>
 <%= f.text_field :name, class: 'form-control', placeholder: "Enter item name" %>
    <% end %>
-<%= form_group_tag(item.errors[:details]) do %>
-<%= f.label :details %>
-<%= f.text_area :details, rows: 8, class: 'form-control', placeholder: "Enter item details" %>
-   <% end %>
    <div class="form-group">
      <%= f.submit "Save", class: 'btn btn-success' %>
    </div>
