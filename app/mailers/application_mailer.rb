@@ -1,4 +1,4 @@
-class FavoriteMailer < ApplicationMailer
+class ApplicationMailer < ActionMailer::Base
   default from: "joel.d.ramsey@gmail.com"
   layout 'mailer'
 
