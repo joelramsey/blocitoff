@@ -1,9 +1,0 @@
-== README
-
-Blocitoff: Utility Application with Rake Automation
-
-A self-destructing to-do list application.
-
-Built with my mentor at Bloc.
-
-Added to Heroku as url = https://immense-scrubland-9134.herokuapp.com/
