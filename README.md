@@ -4,4 +4,4 @@
 
 Made with my mentor at [Bloc](http://bloc.io).
 
-Added to Heroku as [Immense-Scrubland-9194](immense-scrubland-9134.herokuapp.com).
+Added to Heroku as [Immense-Scrubland-9194](https://immense-scrubland-9134.herokuapp.com).
