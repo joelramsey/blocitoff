@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
   
   #def show  
    # @user = current_user
-   # @item = Item.find(params[:id])
+  # @item = Item.find(params[:id])
    # authorize @item
   #end
   
@@ -79,5 +79,5 @@ class ItemsController < ApplicationController
  
   def item_params
     params.require(:item).permit(:name, :details)
-   end
+  end
 end
